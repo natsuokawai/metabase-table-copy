@@ -68,7 +68,7 @@ function copyTableToClipboard(tab) {
     }
 
     const [headerValues, bodyValues] = extractTableData();
-    console.log(!headerValues, !bodyValues);
+    if (!headerValues || !bodyValues) return;
 
     const result = createTableText(
       headerValues,
